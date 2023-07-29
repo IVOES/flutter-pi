@@ -1,0 +1,512 @@
+src/collection.c:42:12: style: The scope of the variable 'new_size' can be reduced. [variableScope]
+    size_t new_size;
+           ^
+src/collection.c:338:9: style: The scope of the variable 'new_size' can be reduced. [variableScope]
+ size_t new_size;
+        ^
+src/compositor.c:887:2: style: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+ if (target != NULL) {
+ ^
+src/compositor.c:874:6: style: The scope of the variable 'ok' can be reduced. [variableScope]
+ int ok;
+     ^
+src/compositor.c:813:21: style: Local variable 'compositor' shadows outer variable [shadowVariable]
+ struct compositor *compositor;
+                    ^
+src/compositor.c:42:19: note: Shadowed declaration
+struct compositor compositor = {
+                  ^
+src/compositor.c:813:21: note: Shadow variable
+ struct compositor *compositor;
+                    ^
+src/compositor.c:840:21: style: Local variable 'compositor' shadows outer variable [shadowVariable]
+ struct compositor *compositor;
+                    ^
+src/compositor.c:42:19: note: Shadowed declaration
+struct compositor compositor = {
+                  ^
+src/compositor.c:840:21: note: Shadow variable
+ struct compositor *compositor;
+                    ^
+src/compositor.c:873:21: style: Local variable 'compositor' shadows outer variable [shadowVariable]
+ struct compositor *compositor;
+                    ^
+src/compositor.c:42:19: note: Shadowed declaration
+struct compositor compositor = {
+                  ^
+src/compositor.c:873:21: note: Shadow variable
+ struct compositor *compositor;
+                    ^
+src/compositor.c:1066:21: style: Local variable 'compositor' shadows outer variable [shadowVariable]
+ struct compositor *compositor;
+                    ^
+src/compositor.c:42:19: note: Shadowed declaration
+struct compositor compositor = {
+                  ^
+src/compositor.c:1066:21: note: Shadow variable
+ struct compositor *compositor;
+                    ^
+src/compositor.c:1032:31: style: Variable 'opacity' is assigned a value that is never used. [unreadVariable]
+ double rotation = 0, opacity = 1;
+                              ^
+src/compositor.c:1044:12: style: Variable 'opacity' is assigned a value that is never used. [unreadVariable]
+   opacity *= mutations[i]->opacity;
+           ^
+src/filesystem_layout.c:19:1: error: There is an unknown macro here somewhere. Configuration is required. If FILE_DESCR is a macro then please configure it. [unknownMacro]
+FILE_DESCR("fs layout")
+^
+src/flutter-pi.c:64:1: error: There is an unknown macro here somewhere. Configuration is required. If FILE_DESCR is a macro then please configure it. [unknownMacro]
+FILE_DESCR("flutter-pi")
+^
+src/keyboard.c:24:1: error: There is an unknown macro here somewhere. Configuration is required. If FILE_DESCR is a macro then please configure it. [unknownMacro]
+FILE_DESCR("keyboard")
+^
+src/modesetting.c:501:9: style: The scope of the variable 'ok' can be reduced. [variableScope]
+    int ok;
+        ^
+src/platformchannel.c:1559:27: style: Array index 'j' is used before limits check. [arrayIndexThenCheck]
+     while (_keyInBAlsoInA[j] && (j < a->size))  j++; // skip all keys with _keyInBAlsoInA set to true.
+                          ^
+src/platformchannel.c:1685:27: style: Array index 'j' is used before limits check. [arrayIndexThenCheck]
+     while (_keyInBAlsoInA[j] && (j < a->size))  j++; // skip all keys with _keyInBAlsoInA set to true.
+                          ^
+src/platformchannel.c:1676:27: warning: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead. [allocaCalled]
+   bool *_keyInBAlsoInA = alloca(sizeof(bool) * a->size);
+                          ^
+src/platformchannel.c:677:30: portability: Casting between unsigned char * and double * which have an incompatible binary data representation. [invalidPointerCast]
+   value_out->float64array = (double*) *pbuffer;
+                             ^
+src/platformchannel.c:930:8: style: Variable 'ok' is reassigned a value before the old one has been used. [redundantAssignment]
+    ok = platch_decode_value_std(&buffer_cursor, &remaining, &(object_out->std_result));
+       ^
+src/platformchannel.c:927:7: note: ok is assigned
+   ok = _read_u8(&buffer_cursor, (uint8_t*) &object_out->success, &remaining);
+      ^
+src/platformchannel.c:930:8: note: ok is overwritten
+    ok = platch_decode_value_std(&buffer_cursor, &remaining, &(object_out->std_result));
+       ^
+src/platformchannel.c:724:6: style: The scope of the variable 'result' can be reduced. [variableScope]
+ int result, ok;
+     ^
+src/platformchannel.c:1264:5: style: Variable 'ok' is assigned a value that is never used. [unreadVariable]
+ ok = flutterpi_respond_to_platform_message(handle, buffer, size);
+    ^
+src/pluginregistry.c:237:48: warning: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead. [allocaCalled]
+ initialized_plugins = PSET_INITIALIZER_STATIC(alloca(sizeof(void*) * n_pointers), n_pointers);
+                                               ^
+src/pluginregistry.c:211:6: style: The scope of the variable 'ok' can be reduced. [variableScope]
+ int ok;
+     ^
+src/plugins/audioplayers/player.c:194:29: style: The statement 'if (self->playback_rate!=rate) self->playback_rate=rate' is logically equivalent to 'self->playback_rate=rate'. [duplicateConditionalAssign]
+    if (self->playback_rate != rate) {
+                            ^
+src/plugins/audioplayers/player.c:195:29: note: Assignment 'self->playback_rate=rate'
+        self->playback_rate = rate;
+                            ^
+src/plugins/audioplayers/player.c:194:29: note: Condition 'self->playback_rate!=rate' is redundant
+    if (self->playback_rate != rate) {
+                            ^
+src/plugins/audioplayers/plugin.c:10:1: error: There is an unknown macro here somewhere. Configuration is required. If FILE_DESCR is a macro then please configure it. [unknownMacro]
+FILE_DESCR("audioplayers plugin")
+^
+src/plugins/gstreamer_video_player/frame.c:423:9: style: The scope of the variable 'ok' can be reduced. [variableScope]
+    int ok;
+        ^
+src/plugins/gstreamer_video_player/player.c:182:24: style: The scope of the variable 'duped' can be reduced. [variableScope]
+    struct video_info *duped;
+                       ^
+src/plugins/gstreamer_video_player/plugin.c:398:5: error: syntax error [syntaxError]
+    if STREQ("listen", method) {
+    ^
+src/plugins/omxplayer_video_player.c:362:9: error: syntax error [syntaxError]
+        if STREQ(name, task->omxplayer_dbus_name) {
+        ^
+src/plugins/services.c:208:5: error: syntax error [syntaxError]
+    if STREQ("create", object->method) {
+    ^
+src/plugins/text_input.c:156:5: error: syntax error [syntaxError]
+    if STREQ("TextInputAction.none", temp->string_value)
+    ^
+src/texture_registry.c:228:5: error: Returning/dereferencing 'texture' after it is deallocated / released [deallocret]
+    return texture;
+    ^
+src/texture_registry.c:225:9: note: Returning/dereferencing 'texture' after it is deallocated / released
+        free(texture);
+        ^
+src/texture_registry.c:228:5: note: Returning/dereferencing 'texture' after it is deallocated / released
+    return texture;
+    ^
+src/texture_registry.c:237:9: style: The scope of the variable 'ok' can be reduced. [variableScope]
+    int ok;
+        ^
+src/user_input.c:253:12: style: The scope of the variable 'to_copy' can be reduced. [variableScope]
+    size_t to_copy;
+           ^
+src/collection.c:485:0: style: The function '__pset_next_pointer' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:111:0: style: The function '_read_float' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:108:0: style: The function '_read_i16' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:107:0: style: The function '_read_i8' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:106:0: style: The function '_read_u64' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:111:0: style: The function '_write_float' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:108:0: style: The function '_write_i16' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:107:0: style: The function '_write_i8' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:106:0: style: The function '_write_u64' is never used. [unusedFunction]
+
+^
+src/plugins/audioplayers/player.c:363:0: style: The function 'audio_player_destroy' is never used. [unusedFunction]
+
+^
+src/plugins/audioplayers/player.c:451:0: style: The function 'audio_player_is_id' is never used. [unusedFunction]
+
+^
+src/plugins/audioplayers/player.c:60:0: style: The function 'audio_player_new' is never used. [unusedFunction]
+
+^
+src/plugins/audioplayers/player.c:325:0: style: The function 'audio_player_set_looping' is never used. [unusedFunction]
+
+^
+src/plugins/audioplayers/player.c:421:0: style: The function 'audio_player_set_playback_rate' is never used. [unusedFunction]
+
+^
+src/plugins/audioplayers/player.c:432:0: style: The function 'audio_player_set_source_url' is never used. [unusedFunction]
+
+^
+src/plugins/audioplayers/player.c:412:0: style: The function 'audio_player_set_volume' is never used. [unusedFunction]
+
+^
+src/plugins/audioplayers/player.c:117:0: style: The function 'audio_player_source_setup' is never used. [unusedFunction]
+
+^
+src/notifier_listener.c:57:0: style: The function 'change_notifier_new' is never used. [unusedFunction]
+
+^
+src/compositor.c:1769:0: style: The function 'compositor_apply_cursor_state' is never used. [unusedFunction]
+
+^
+src/compositor.c:1643:0: style: The function 'compositor_initialize' is never used. [unusedFunction]
+
+^
+src/compositor.c:1581:0: style: The function 'compositor_on_page_flip' is never used. [unusedFunction]
+
+^
+src/compositor.c:1625:0: style: The function 'compositor_remove_view_callbacks' is never used. [unusedFunction]
+
+^
+src/compositor.c:1908:0: style: The function 'compositor_set_cursor_pos' is never used. [unusedFunction]
+
+^
+src/compositor.c:1591:0: style: The function 'compositor_set_view_callbacks' is never used. [unusedFunction]
+
+^
+src/texture_registry.c:27:0: style: The function 'counted_texture_frame_destroy' is never used. [unusedFunction]
+
+^
+src/collection.c:138:0: style: The function 'cqueue_deinit' is never used. [unusedFunction]
+
+^
+src/collection.c:257:0: style: The function 'cqueue_dequeue' is never used. [unusedFunction]
+
+^
+src/collection.c:190:0: style: The function 'cqueue_enqueue' is never used. [unusedFunction]
+
+^
+src/collection.c:117:0: style: The function 'cqueue_init' is never used. [unusedFunction]
+
+^
+src/collection.c:272:0: style: The function 'cqueue_peek_locked' is never used. [unusedFunction]
+
+^
+src/collection.c:242:0: style: The function 'cqueue_try_dequeue' is never used. [unusedFunction]
+
+^
+src/collection.c:169:0: style: The function 'cqueue_try_enqueue' is never used. [unusedFunction]
+
+^
+src/compositor.c:76:0: style: The function 'destroy_stale_rendertargets' is never used. [unusedFunction]
+
+^
+src/modesetting.c:490:0: style: The function 'drmdev_configure' is never used. [unusedFunction]
+
+^
+src/modesetting.c:1148:0: style: The function 'drmdev_legacy_set_connector_property' is never used. [unusedFunction]
+
+^
+src/modesetting.c:1182:0: style: The function 'drmdev_legacy_set_crtc_property' is never used. [unusedFunction]
+
+^
+src/modesetting.c:469:0: style: The function 'drmdev_new_from_path' is never used. [unusedFunction]
+
+^
+src/modesetting.c:786:0: style: The function 'drmdev_plane_supports_setting_zpos' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/frame.c:104:0: style: The function 'frame_interface_destroy' is never used. [unusedFunction]
+
+^
+src/modesetting.c:358:0: style: The function 'free_planes' is never used. [unusedFunction]
+
+^
+src/pluginregistry.c:96:0: style: The function 'get_cb_data_by_channel' is never used. [unusedFunction]
+
+^
+src/compositor.c:63:0: style: The function 'get_cbs_for_view_id' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1131:0: style: The function 'gstplayer_destroy' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1316:0: style: The function 'gstplayer_get_buffering_state_notifier' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1320:0: style: The function 'gstplayer_get_error_notifier' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1195:0: style: The function 'gstplayer_get_position' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1145:0: style: The function 'gstplayer_get_texture_id' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1159:0: style: The function 'gstplayer_get_userdata_locked' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1312:0: style: The function 'gstplayer_get_video_info_notifier' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1163:0: style: The function 'gstplayer_initialize' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1082:0: style: The function 'gstplayer_new_from_asset' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1123:0: style: The function 'gstplayer_new_from_content_uri' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1115:0: style: The function 'gstplayer_new_from_file' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1105:0: style: The function 'gstplayer_new_from_network' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1174:0: style: The function 'gstplayer_pause' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1167:0: style: The function 'gstplayer_play' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1149:0: style: The function 'gstplayer_put_http_header' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1232:0: style: The function 'gstplayer_seek_to' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1181:0: style: The function 'gstplayer_set_looping' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1240:0: style: The function 'gstplayer_set_playback_speed' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1155:0: style: The function 'gstplayer_set_userdata_locked' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1187:0: style: The function 'gstplayer_set_volume' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1279:0: style: The function 'gstplayer_step_backward' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:1247:0: style: The function 'gstplayer_step_forward' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:1582:0: style: The function 'jsobject_get' is never used. [unusedFunction]
+
+^
+src/locales.c:375:0: style: The function 'locale_get_codeset' is never used. [unusedFunction]
+
+^
+src/locales.c:367:0: style: The function 'locale_get_language' is never used. [unusedFunction]
+
+^
+src/locales.c:379:0: style: The function 'locale_get_modifier' is never used. [unusedFunction]
+
+^
+src/locales.c:371:0: style: The function 'locale_get_territory' is never used. [unusedFunction]
+
+^
+src/locales.c:383:0: style: The function 'locales_add_to_fl_engine' is never used. [unusedFunction]
+
+^
+src/locales.c:339:0: style: The function 'locales_destroy' is never used. [unusedFunction]
+
+^
+src/locales.c:360:0: style: The function 'locales_get_default_flutter_locale' is never used. [unusedFunction]
+
+^
+src/locales.c:351:0: style: The function 'locales_get_flutter_locales' is never used. [unusedFunction]
+
+^
+src/locales.c:264:0: style: The function 'locales_new' is never used. [unusedFunction]
+
+^
+src/locales.c:395:0: style: The function 'locales_on_compute_platform_resolved_locale' is never used. [unusedFunction]
+
+^
+src/locales.c:406:0: style: The function 'locales_print' is never used. [unusedFunction]
+
+^
+src/modesetting.c:373:0: style: The function 'mode_get_vrefresh' is never used. [unusedFunction]
+
+^
+src/notifier_listener.c:106:0: style: The function 'notifier_destroy' is never used. [unusedFunction]
+
+^
+src/notifier_listener.c:113:0: style: The function 'notifier_listen' is never used. [unusedFunction]
+
+^
+src/notifier_listener.c:143:0: style: The function 'notifier_unlisten' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:829:0: style: The function 'platch_decode_json' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:1433:0: style: The function 'platch_respond_illegal_arg_ext_pigeon' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:1363:0: style: The function 'platch_respond_illegal_arg_json' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:1421:0: style: The function 'platch_respond_illegal_arg_pigeon' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:1312:0: style: The function 'platch_respond_illegal_arg_std' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:1368:0: style: The function 'platch_respond_native_error_json' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:1447:0: style: The function 'platch_respond_native_error_pigeon' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:1319:0: style: The function 'platch_respond_native_error_std' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:1334:0: style: The function 'platch_respond_success_json' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:1381:0: style: The function 'platch_respond_success_pigeon' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:1285:0: style: The function 'platch_respond_success_std' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:1505:0: style: The function 'platch_send_error_event_json' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:1474:0: style: The function 'platch_send_error_event_std' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:1494:0: style: The function 'platch_send_success_event_json' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:1462:0: style: The function 'platch_send_success_event_std' is never used. [unusedFunction]
+
+^
+src/pluginregistry.c:209:0: style: The function 'plugin_registry_add_plugins_from_static_registry' is never used. [unusedFunction]
+
+^
+src/pluginregistry.c:141:0: style: The function 'plugin_registry_destroy' is never used. [unusedFunction]
+
+^
+src/pluginregistry.c:228:0: style: The function 'plugin_registry_ensure_plugins_initialized' is never used. [unusedFunction]
+
+^
+src/pluginregistry.c:369:0: style: The function 'plugin_registry_get_plugin_userdata' is never used. [unusedFunction]
+
+^
+src/pluginregistry.c:362:0: style: The function 'plugin_registry_is_plugin_present' is never used. [unusedFunction]
+
+^
+src/pluginregistry.c:109:0: style: The function 'plugin_registry_new' is never used. [unusedFunction]
+
+^
+src/pluginregistry.c:155:0: style: The function 'plugin_registry_on_platform_message' is never used. [unusedFunction]
+
+^
+src/collection.c:411:0: style: The function 'pset_copy' is never used. [unusedFunction]
+
+^
+src/collection.c:300:0: style: The function 'pset_init_static' is never used. [unusedFunction]
+
+^
+src/collection.c:449:0: style: The function 'pset_intersect' is never used. [unusedFunction]
+
+^
+src/collection.c:465:0: style: The function 'pset_union' is never used. [unusedFunction]
+
+^
+src/plugins/raw_keyboard.c:13:0: style: The function 'rawkb_send_android_keyevent' is never used. [unusedFunction]
+
+^
+src/plugins/raw_keyboard.c:94:0: style: The function 'rawkb_send_gtk_keyevent' is never used. [unusedFunction]
+
+^
+src/pluginregistry.c:381:0: style: The function 'static_plugin_registry_add_plugin' is never used. [unusedFunction]
+
+^
+src/pluginregistry.c:385:0: style: The function 'static_plugin_registry_remove_plugin' is never used. [unusedFunction]
+
+^
+src/platformchannel.c:1722:0: style: The function 'stdmap_get_str' is never used. [unusedFunction]
+
+^
+src/texture_registry.c:204:0: style: The function 'texture_new' is never used. [unusedFunction]
+
+^
+src/texture_registry.c:82:0: style: The function 'texture_registry_destroy' is never used. [unusedFunction]
+
+^
+src/texture_registry.c:166:0: style: The function 'texture_registry_gl_external_texture_frame_callback' is never used. [unusedFunction]
+
+^
+src/texture_registry.c:57:0: style: The function 'texture_registry_new' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:169:0: style: The function 'trace_instant' is never used. [unusedFunction]
+
+^
+src/plugins/gstreamer_video_player/player.c:165:0: style: The function 'unlock' is never used. [unusedFunction]
+
+^
+src/user_input.c:196:0: style: The function 'user_input_destroy' is never used. [unusedFunction]
+
+^
+src/user_input.c:229:0: style: The function 'user_input_get_fd' is never used. [unusedFunction]
+
+^
+src/user_input.c:105:0: style: The function 'user_input_new' is never used. [unusedFunction]
+
+^
+src/user_input.c:1241:0: style: The function 'user_input_on_fd_ready' is never used. [unusedFunction]
+
+^
+src/notifier_listener.c:75:0: style: The function 'value_notifier_new' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
